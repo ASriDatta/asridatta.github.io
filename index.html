@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,24 +13,20 @@
                 margin: 0;
                 padding: 0;
                 backdrop-filter: blur(12px);
-                background-color: #E7E7E7;
             color: white;
             font-family: 'Poppins',Sans-Serif;
         }
-        .biodata{
-            
-        }
-        .biodata-color{
-            background-color: #6C00FF;
+        .biodata,.biodata-color{
+            background: linear-gradient(135deg,#6800e6,#5C00CC,#5100B3);
         }
         .skills,.skills-color{
-            background-color: #16B200;
+            background: linear-gradient(45deg,#2eb017,#299c14,#248912);
         }
         .projects,.projects-color{
-            background-color: #0078FF;
+            background: linear-gradient(135deg,#1A86FF,#0078FF,#006CE6,#0060cc);
         }
-        .certifications,.certifications-color{
-            background-color: #C200FF;
+        .certifications-color{
+            background:linear-gradient(45deg,#ac2bd6,#C200FF,#9311bc);
         }
         .contact_us,.contact_us-color{
             background: #141414;
@@ -67,8 +63,9 @@
                 grid-row: 2;
             }
             .skill{
-                width: 45%;
+                width: 43%;
                 height: 6rem;
+                margin: 5%;
             }
             .special-skill{
                 width: 100%;
@@ -105,22 +102,21 @@
             }
             .skill:nth-child(7){
                 grid-row: 4;
-                width: 100%;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                width: 93%;
             }
             .cols-rows{
-                gap: 2%;
+                gap: 4%;
             }
-           /* .skill:nth-child(8){
-                grid-row: 6;
-                grid-column: 1;
-            }
-            .skill:nth-child(9){
-                grid-row: 6;
-                grid-column: 2;
-                transition-delay: 2s;
-            }*/
             .lft-pad{
                 padding: 0 0 0 0.8rem;
+            }
+            .m-cntr:nth-child(odd){
+                margin-left: 25%;
+            }
+            .m-cntr:nth-child(even){
+                margin-left: 25%;
             }
         }
             .bloc{
@@ -161,8 +157,8 @@
             .special-skill{
                 width: calc(100% - 2em);
                 margin: 5% 0 ;
-                color: #16B200;
-                background-color: #FFFFFF;/*#B0FFA0;*/
+                color: #FFC100;
+                background-color: #ac2bd6;/*#B0FFA0;*/
                 border-radius: 1em;
                 padding: 1em;
                 grid-row: 2;
@@ -174,13 +170,17 @@
                 text-align: left;
                 width: calc(100% - 2em);
                 margin: 5% 0 ;
-                color:#16B200;
-                background-color: #FFFFFF;
+                color:#FFC100;
+                background-color: #ac2bd6;
+                backdrop-filter: blur(7px);
                 border-radius: 1em;
                 padding: 1em;
             }
             .skill:hover{
                 scale: 1.1;
+            }
+            td>span,td>h2{
+                color: #FFC100;
             }
             .icon{
                 height: 5rem;
@@ -189,6 +189,7 @@
             }
             .icontext{
                 margin: 0;
+                color: #ffffff;
             }
             .section-title{
                 grid-row: 1;
@@ -199,12 +200,6 @@
                 grid-row: 3;
                 padding: 0;
                 margin: 0;
-            }
-            td>h2{
-                color: #16B200;
-            }
-            td>span{
-                color:#16B200;
             }
             .contact_us{
             align-self: left;
@@ -239,8 +234,33 @@
             .sicon:hover{
                 scale: 1.4;
             }
-            .iconrow{
-                
+            .myawards{
+   background: #FFE324;
+background: linear-gradient(to bottom left, #FFE324 100%, #FFB533 79%);
+}
+            .myskills{
+background: #FF00FF;
+background: linear-gradient(to top right, #FF00FF, #FCCF3A);
+            }
+            .myprojects{
+background: #2AFEB7;
+background: linear-gradient(to bottom left, #2AFEB7 100%, #08C792 88%);
+            }
+            .projectname{
+background: #F0101D;
+background: linear-gradient(to right, #F0101D , #FCB045 , #833AB4 );
+            }
+            .coursename{
+background: #00daff;
+background: linear-gradient(to left, ##00DAFF 14%, #0575E6 74%);
+            }
+            .shallwemeet{
+background: #ffffff;
+background: linear-gradient(to bottom left, #ffffff 100%, #F5F5F5 88%);
+            }
+            .shallwemeet,.coursename,.projectname,.myprojects,.myskills,.myawards{
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
             }
         </style>
     </head>
@@ -252,16 +272,16 @@
             </div>
             <div class="down hide">
                 <h1 class="hide lft-pad">Acha sridatta<br>varma</h1>
-                <p class="hide lft-pad">I'm a CSE student at KITS warangal. </p>
+                <p class="hide lft-pad">I like to learn new concepts in computer science and programming. My passion is to apply them to solve real world problems.</p>
             </div>
         </div>
         </div>
         <div class="skills-color">
             <div class="bloc skills">
-        <div class="section-title"><h1 class="mainheading hide">My Skills</h1></div>
+        <div class="section-title"><h1 class="mainheading hide myskills">My Skills</h1></div>
 <div class="hide special-skill">
 
-<svg class="icon hide" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="icon hide m-cntr" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/>
 <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/>
 <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
@@ -278,8 +298,8 @@ d="m256 208v57h69l-7 73-62 17v59l115-32 26-288H256v56h80l-5.5 58Z"/></svg>
 <path d="M19 25.2879L21.0615 23.9237C21.2231 24.4313 22.2462 25.6368 23.5385 25.6368C24.8308 25.6368 25.4308 24.931 25.4308 24.463C25.4308 23.1878 24.1112 22.7382 23.4774 22.5223C23.374 22.4871 23.289 22.4581 23.2308 22.4328C23.2009 22.4198 23.1558 22.4025 23.0979 22.3804C22.393 22.1111 19.7923 21.1175 19.7923 18.2373C19.7923 15.065 22.8538 14.7002 23.5462 14.7002C23.9991 14.7002 26.1769 14.7557 27.2615 16.7939L25.2615 18.1898C24.8231 17.3015 24.0946 17.0081 23.6462 17.0081C22.5385 17.0081 22.3077 17.8201 22.3077 18.1898C22.3077 19.227 23.5112 19.6919 24.5273 20.0844C24.7932 20.1871 25.0462 20.2848 25.2615 20.3866C26.3692 20.91 28 21.7666 28 24.463C28 25.8136 26.8672 28.0002 24.0154 28.0002C20.1846 28.0002 19.1692 25.7003 19 25.2879Z" fill="#3E3E3E"/>
 <path d="M9 25.5587L11.1487 24.1953C11.317 24.7026 11.9713 25.638 12.9205 25.638C13.8698 25.638 14.3557 24.663 14.3557 24.1953V15.0002H16.9982V24.1953C17.041 25.4636 16.3376 28.0002 13.2332 28.0002C10.379 28.0002 9.19242 26.3039 9 25.5587Z" fill="#3E3E3E"/>
 </svg>
-<h2 class="icontext hide">Web development</h2>
-<span class="hide" style="font-size:1rem;">Jun - Oct 2020</span>
+<h2 class="icontext hide m-cntr">Web development</h2>
+<span class="hide m-cntr" style="font-size:1rem;">Jun - Oct 2020</span>
 </div>
 <div class="cols-rows">
 <div class="skill hide">
@@ -407,7 +427,7 @@ d="m256 208v57h69l-7 73-62 17v59l115-32 26-288H256v56h80l-5.5 58Z"/></svg>
 </table>
 </div>
 <div class="skill hide">
-<table border="0">
+<table border="0" class="m-cntr">
 <tr>
 <td rowspan="2">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon hide" xml:space="preserve" version="1.1" viewBox="0 0 739 415">
@@ -424,13 +444,14 @@ d="m256 208v57h69l-7 73-62 17v59l115-32 26-288H256v56h80l-5.5 58Z"/></svg>
         </div>
         <div class="projects-color">
             <div class=" bloc projects">
-            <h1 class="mainheading hide h-pro lft">My Projects</h1>
-            <div class="up up2 hide">
-                <h1>SD Code editor</h1>
+            <h1 class="mainheading hide h-pro lft myprojects">My Projects</h1>
+            <div class="up hide">
+                <h1 class="projectname">SD Code editor</h1>
                 <span class="hide">
                     A code editor designed specifically for mobile devices with the basic features of a code editor in the desktop.<br />
                     <br />
                     <b class="hide">Aug - Sept 2022</b>
+                    <br />
                 </span>
             </div>
             <div class="down down2 hide">
@@ -439,19 +460,19 @@ d="m256 208v57h69l-7 73-62 17v59l115-32 26-288H256v56h80l-5.5 58Z"/></svg>
         </div>
         </div>
         <div class="certifications-color">
-            <div class="certifications  bloc lft">
-            <h1 class="mainheading hide lft">My Awards</h1>
-            <h1 class="hide lft">Web devlopment from mimo</h1>
-            <span class="hide lft">mimo is my first coding platform where I have started my coding journey towards being devloper. It helped me to learn about the basic concepts of the programming before going to college.
+            <div class="certifications bloc lft">
+            <h1 class="mainheading hide lft myawards">My Awards</h1>
+            <h1 class="hide lft coursename">Web devlopment from <span style="background-color:#3f4273;color:#ffffff;-webkit-text-fill-color:#ffffff;">mimo</span></h1>
+            <span class="hide lft">mimo is my first coding platform where I have started my coding journey towards being developer. It helped me to learn about the basic concepts of the programming before going to college.
             <br />
             <br />
             <b class="hide lft">Jun - Oct 2020</b>
             </span>
         </div>
             <div class="certifications bloc">
-                <h1 class="hide lft mainheadmargin">Python 101 for Data Science By cognitive class
+                <h1 class="hide lft mainheadmargin coursename">Python 101 for Data Science By cognitive class
                 </h1>
-                <h3 class="hide lft subhead"><span style="font-weight:400;">Powered by </span>IBM Developer Skills Network</h3>
+                <h3 class="hide lft subhead"><span style="font-weight:400;">Powered by </span><span style="background-color:#000011; color:#ffffff;"> IBM </span> Developer Skills Network</h3>
                 <br />
                 <br />
                 <span class="hide lft">This course is another turning point in my developer journey. From this course I started to use the data science concepts to solve real world problems in the field of finance.<br />
@@ -461,7 +482,7 @@ d="m256 208v57h69l-7 73-62 17v59l115-32 26-288H256v56h80l-5.5 58Z"/></svg>
         </div>
         <div class="contact_us-color">
             <div class="contact_us bloc lft">
-                <h1 class="mainheading hide lft">Shall We<br />Meet</h1>
+                <h1 class="mainheading hide lft shallwemeet">Shall We<br />Meet</h1>
             <div class="hide iconrow lft">
                 <img class="sicon hide" onclick="email();" src="data:image/png;base64,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">
 <svg xmlns="http://www.w3.org/2000/svg" onclick="email(1)"  viewBox="0 0 48 48" class="sicon hide"><linearGradient id="rL2wppHyxHVbobwndsT6Ca" x1="4" x2="44" y1="23.508" y2="23.508" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4c4c4c"/><stop offset="1" stop-color="#343434"/></linearGradient><path fill="url(#rL2wppHyxHVbobwndsT6Ca)" d="M24,4C12.954,4,4,12.954,4,24c0,8.887,5.801,16.411,13.82,19.016h12.36	C38.199,40.411,44,32.887,44,24C44,12.954,35.046,4,24,4z"/><path d="M30.01,41.996L30,36.198c0-0.939-0.22-1.856-0.642-2.687c5.641-1.133,8.386-4.468,8.386-10.177	c0-2.255-0.665-4.246-1.976-5.92c0.1-0.317,0.174-0.645,0.22-0.981c0.188-1.369-0.023-2.264-0.193-2.984l-0.027-0.116	c-0.186-0.796-0.409-1.364-0.418-1.388l-0.111-0.282l-0.111-0.282l-0.302-0.032l-0.303-0.032c0,0-0.199-0.021-0.501-0.021	c-0.419,0-1.04,0.042-1.627,0.241l-0.196,0.066c-0.74,0.249-1.439,0.485-2.417,1.069c-0.286,0.171-0.599,0.366-0.934,0.584	C27.334,12.881,25.705,12.69,24,12.69c-1.722,0-3.365,0.192-4.889,0.571c-0.339-0.22-0.654-0.417-0.942-0.589	c-0.978-0.584-1.677-0.819-2.417-1.069l-0.196-0.066c-0.585-0.199-1.207-0.241-1.626-0.241c-0.302,0-0.501,0.021-0.501,0.021	l-0.302,0.032l-0.3,0.031l-0.112,0.281l-0.113,0.283c-0.01,0.026-0.233,0.594-0.419,1.391l-0.027,0.115	c-0.17,0.719-0.381,1.615-0.193,2.983c0.048,0.346,0.125,0.685,0.23,1.011c-1.285,1.666-1.936,3.646-1.936,5.89	c0,5.695,2.748,9.028,8.397,10.17c-0.194,0.388-0.345,0.798-0.452,1.224c-0.197,0.067-0.378,0.112-0.538,0.137	c-0.238,0.036-0.487,0.054-0.739,0.054c-0.686,0-1.225-0.134-1.435-0.259c-0.313-0.186-0.872-0.727-1.414-1.518	c-0.463-0.675-1.185-1.558-1.992-1.927c-0.698-0.319-1.437-0.502-2.029-0.502c-0.138,0-0.265,0.01-0.376,0.028	c-0.517,0.082-0.949,0.366-1.184,0.78c-0.203,0.357-0.235,0.773-0.088,1.141c0.219,0.548,0.851,0.985,1.343,1.255	c0.242,0.133,0.765,0.619,1.07,1.109c0.229,0.368,0.335,0.63,0.482,0.992c0.087,0.215,0.183,0.449,0.313,0.732	c0.47,1.022,1.937,1.924,2.103,2.023c0.806,0.483,2.161,0.638,3.157,0.683l0.123,0.003c0,0,0.001,0,0.001,0	c0.24,0,0.57-0.023,1.004-0.071v2.613c0.002,0.529-0.537,0.649-1.25,0.638l0.547,0.184C19.395,43.572,21.645,44,24,44	c2.355,0,4.605-0.428,6.703-1.176l0.703-0.262C30.695,42.538,30.016,42.422,30.01,41.996z" opacity=".05"/><path d="M30.781,42.797c-0.406,0.047-1.281-0.109-1.281-0.795v-5.804c0-1.094-0.328-2.151-0.936-3.052	c5.915-0.957,8.679-4.093,8.679-9.812c0-2.237-0.686-4.194-2.039-5.822c0.137-0.365,0.233-0.75,0.288-1.147	c0.175-1.276-0.016-2.086-0.184-2.801l-0.027-0.116c-0.178-0.761-0.388-1.297-0.397-1.319l-0.111-0.282l-0.303-0.032	c0,0-0.178-0.019-0.449-0.019c-0.381,0-0.944,0.037-1.466,0.215l-0.196,0.066c-0.714,0.241-1.389,0.468-2.321,1.024	c-0.332,0.198-0.702,0.431-1.101,0.694C27.404,13.394,25.745,13.19,24,13.19c-1.762,0-3.435,0.205-4.979,0.61	c-0.403-0.265-0.775-0.499-1.109-0.699c-0.932-0.556-1.607-0.784-2.321-1.024l-0.196-0.066c-0.521-0.177-1.085-0.215-1.466-0.215	c-0.271,0-0.449,0.019-0.449,0.019l-0.302,0.032l-0.113,0.283c-0.009,0.022-0.219,0.558-0.397,1.319l-0.027,0.116	c-0.169,0.715-0.36,1.524-0.184,2.8c0.056,0.407,0.156,0.801,0.298,1.174c-1.327,1.62-1.999,3.567-1.999,5.795	c0,5.703,2.766,8.838,8.686,9.806c-0.395,0.59-0.671,1.255-0.813,1.964c-0.33,0.13-0.629,0.216-0.891,0.256	c-0.263,0.04-0.537,0.06-0.814,0.06c-0.69,0-1.353-0.129-1.69-0.329c-0.44-0.261-1.057-0.914-1.572-1.665	c-0.35-0.51-1.047-1.417-1.788-1.755c-0.635-0.29-1.298-0.457-1.821-0.457c-0.11,0-0.21,0.008-0.298,0.022	c-0.366,0.058-0.668,0.252-0.828,0.534c-0.128,0.224-0.149,0.483-0.059,0.708c0.179,0.448,0.842,0.85,1.119,1.002	c0.335,0.184,0.919,0.744,1.254,1.284c0.251,0.404,0.37,0.697,0.521,1.067c0.085,0.209,0.178,0.437,0.304,0.712	c0.331,0.719,1.353,1.472,1.905,1.803c0.754,0.452,2.154,0.578,2.922,0.612l0.111,0.002c0.299,0,0.8-0.045,1.495-0.135v3.177	c0,0.779-0.991,0.81-1.234,0.81c-0.031,0,0.503,0.184,0.503,0.184C19.731,43.64,21.822,44,24,44c2.178,0,4.269-0.36,6.231-1.003	C30.231,42.997,30.812,42.793,30.781,42.797z" opacity=".07"/><path fill="#fff" d="M36.744,23.334c0-2.31-0.782-4.226-2.117-5.728c0.145-0.325,0.296-0.761,0.371-1.309	c0.172-1.25-0.031-2-0.203-2.734s-0.375-1.25-0.375-1.25s-0.922-0.094-1.703,0.172s-1.453,0.469-2.422,1.047	c-0.453,0.27-0.909,0.566-1.27,0.806C27.482,13.91,25.785,13.69,24,13.69c-1.801,0-3.513,0.221-5.067,0.652	c-0.362-0.241-0.821-0.539-1.277-0.811c-0.969-0.578-1.641-0.781-2.422-1.047s-1.703-0.172-1.703-0.172s-0.203,0.516-0.375,1.25	s-0.375,1.484-0.203,2.734c0.077,0.562,0.233,1.006,0.382,1.333c-1.31,1.493-2.078,3.397-2.078,5.704	c0,5.983,3.232,8.714,9.121,9.435c-0.687,0.726-1.148,1.656-1.303,2.691c-0.387,0.17-0.833,0.33-1.262,0.394	c-1.104,0.167-2.271,0-2.833-0.333s-1.229-1.083-1.729-1.813c-0.422-0.616-1.031-1.331-1.583-1.583	c-0.729-0.333-1.438-0.458-1.833-0.396c-0.396,0.063-0.583,0.354-0.5,0.563c0.083,0.208,0.479,0.521,0.896,0.75	c0.417,0.229,1.063,0.854,1.438,1.458c0.418,0.674,0.5,1.063,0.854,1.833c0.249,0.542,1.101,1.219,1.708,1.583	c0.521,0.313,1.562,0.491,2.688,0.542c0.389,0.018,1.308-0.096,2.083-0.206v3.75c0,0.639-0.585,1.125-1.191,1.013	C19.756,43.668,21.833,44,24,44c2.166,0,4.243-0.332,6.19-0.984C29.585,43.127,29,42.641,29,42.002v-5.804	c0-1.329-0.527-2.53-1.373-3.425C33.473,32.071,36.744,29.405,36.744,23.334z M11.239,32.727c-0.154-0.079-0.237-0.225-0.185-0.328	c0.052-0.103,0.22-0.122,0.374-0.043c0.154,0.079,0.237,0.225,0.185,0.328S11.393,32.806,11.239,32.727z M12.451,33.482	c-0.081,0.088-0.255,0.06-0.389-0.062s-0.177-0.293-0.096-0.381c0.081-0.088,0.255-0.06,0.389,0.062S12.532,33.394,12.451,33.482z M13.205,34.732c-0.102,0.072-0.275,0.005-0.386-0.15s-0.118-0.34-0.016-0.412s0.275-0.005,0.386,0.15	C13.299,34.475,13.307,34.66,13.205,34.732z M14.288,35.673c-0.069,0.112-0.265,0.117-0.437,0.012s-0.256-0.281-0.187-0.393	c0.069-0.112,0.265-0.117,0.437-0.012S14.357,35.561,14.288,35.673z M15.312,36.594c-0.213-0.026-0.371-0.159-0.353-0.297	c0.017-0.138,0.204-0.228,0.416-0.202c0.213,0.026,0.371,0.159,0.353,0.297C15.711,36.529,15.525,36.62,15.312,36.594z M16.963,36.833c-0.227-0.013-0.404-0.143-0.395-0.289c0.009-0.146,0.2-0.255,0.427-0.242c0.227,0.013,0.404,0.143,0.395,0.289	C17.381,36.738,17.19,36.846,16.963,36.833z M18.521,36.677c-0.242,0-0.438-0.126-0.438-0.281s0.196-0.281,0.438-0.281	c0.242,0,0.438,0.126,0.438,0.281S18.762,36.677,18.521,36.677z"/>
@@ -488,8 +509,8 @@ d="m256 208v57h69l-7 73-62 17v59l115-32 26-288H256v56h80l-5.5 58Z"/></svg>
         bloc.forEach((div) => observer.observe(div));
         function email(num=0){
             let a = document.querySelector('#redirect');
-            console.log(a)
-            a.setAttribute("href","https://www.google.com/");
+            let hrefs = ["email:achasridattavarma@gmail.com?subject=source:website","https://github.com/asridatta","https://www.linkedin.com/","https://facebook.com/"];
+            a.setAttribute("href",hrefs[num]);
             a.click();
         }
     </script>
