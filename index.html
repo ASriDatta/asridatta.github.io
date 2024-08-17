@@ -13,6 +13,7 @@
                 margin: 0;
                 padding: 0;
                 backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
             color: white;
             font-family: 'Poppins',Sans-Serif;
         }
@@ -137,17 +138,13 @@
                 filter: blur(0px);
                 transform: translateX(0);
             }
-            .bloclast{
-                
-            }
+            .bloclast{ }
             .myphoto{
                 width: 100%;
                 height: auto;
                 border-radius: 1em;
             }
-            .up,.down{
-                
-            }
+            .up,.down{ }
             p{
                 text-align: left;
             }
@@ -222,7 +219,7 @@
                 margin: 0 0 auto 0;
             }
             .mainheadmargin{
-                margin-down: 0;
+                margin-bottom: 0;
             }
             .sicon{
                 margin: 0.4em;
@@ -252,7 +249,7 @@ background: linear-gradient(to right, #F0101D , #FCB045 , #833AB4 );
             }
             .coursename{
 background: #00daff;
-background: linear-gradient(to left, ##00DAFF 14%, #0575E6 74%);
+background: linear-gradient(to left, #00DAFF 14%, #0575E6 74%);
             }
             .shallwemeet{
 background: #ffffff;
@@ -260,6 +257,7 @@ background: linear-gradient(to bottom left, #ffffff 100%, #F5F5F5 88%);
             }
             .shallwemeet,.coursename,.projectname,.myprojects,.myskills,.myawards{
 -webkit-background-clip: text;
+background-clip: text;
 -webkit-text-fill-color: transparent;
             }
         </style>
