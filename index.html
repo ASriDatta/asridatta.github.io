@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon512.png" type="image/x-icon">
+    <title>Acha SriDatta Varma</title>
+    <style>
+        :root{
+            accent-color: rgb(106, 13, 227);
+        }
+        @media screen and (min-width: 560px) {
+            .view-ui{
+                min-width: 560px;
+                max-width: 70vw;
+            }
+            .center-contents{
+                max-width: 70vw;
+                min-width: 560px;
+                margin: 0 auto;
+            }
+            .layout-grid{
+                grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+            }
+        }
+        .profile{
+            width: min(260px, 90%);
+        }
+        /*slide animmations*/
+        .hide{
+            opacity: 0;
+            filter: blur(5px);
+            transform: translatex(-100%);
+            transition: all 1s;
+        }
+        .show{
+            transform: translatex(0);
+            filter: blur(0px);
+            opacity: 1;
+        }
+        .trans-2s{
+            transition-delay: 0.5s;
+        }
+        .trans-4s{
+            transition-delay: 1s;
+        }
+        .trans-6s{
+            transition-delay: 1.5s;
+        }
+        .trans-8s{
+            transition-delay: 2s;
+        }
+        .text-gradients{
+            background: linear-gradient(to bottom right, /*rgb(249, 2, 200),*/ rgb(0, 238, 255), rgb(2, 240, 97));
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 1.15em;
+            line-height: 1.5em;
+        }
+        p{
+            font-weight: normal;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-weight: 800;
+        }
+        .blue-grad{
+            background-color: rgb(35, 35, 35);
+            color: rgb(255, 140, 8);
+            padding: 2%;
+            display: inline-block;
+            margin: auto 0.4em auto auto;
+        }
+        .big-text{
+            font-size: 2.5em;
+        }
+        /*background layers for constant backgrond color rendering*/
+        .view-ui{
+            height: 100vh;
+            padding: 1%;
+            margin: 0 auto;
+            overflow-y: scroll;
+/*important code snippet for future use*/
+            /* Hide scrollbar for IE, Edge, and Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;     /* Firefox */
+        }
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        .view-ui::-webkit-scrollbar {
+            display: none;
+        }
+        /*important code snippet for future use*/
+        body{
+            margin: 0px;
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        html{
+            padding: 0px;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .center-contents{
+            min-height: 100vh;
+            display: grid;
+            align-content: center;
+            place-items: center;
+            margin-top: 5%;
+        }
+        .bkg-clr-layer{
+            background: linear-gradient(to right bottom,rgb(0, 71, 77),rgb(0, 38, 42));
+            padding: 1%;
+        }
+        .layout-grid{
+            display: grid;
+            min-width: 200px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        /*text*/
+        .skill{
+            color: rgb(4, 242, 234);
+            background-color: rgba(48, 201, 201, 0.224);
+            padding: 0.2em 0.8em;
+            border-radius: 0.3em;
+            width: fit-content;
+            display: inline-block;
+            margin: 0.3em;
+            transition: all 0.8s;
+        }
+        .skill:hover{
+            scale: 1.05;
+        }
+        .ext-link{
+            border: rgb(4, 242, 234) solid 0.05em;
+            background: transparent;
+            color: rgb(4, 242, 234);
+            padding: 0.2em 0.5em;
+            text-decoration: none;
+            border-radius: 0.35em;
+            margin: 0.3em;
+            transition: all 0.8s;
+        }
+        .ext-link:hover{
+            transition: all 0.8s;
+            color: rgb(0, 255, 8);
+            text-decoration: underline;
+            background-color: rgba(29, 254, 29, 0.203);
+            border: none;
+        }
+        .secret{
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+        .inline{ display: inline-block; }
+        .p{
+            opacity: 0.94;
+        }
+        .h2{
+            font-size: 1.8em;
+        }
+        .social-icon{
+            background-color: transparent;
+            color: rgba(10, 241, 188, 0.991);
+            height: 1.8em;
+            width: 1.8em;
+            margin: 0.8rem;
+            transition: all 0.8s;
+        }
+        .social-icon:hover{
+            scale: 1.3;
+            color: rgba(3, 252, 157, 0.991);
+        }
+        .hightlight{
+            opacity: 1;
+        }
+        .project-card{
+            padding: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="bkg-clr-layer">
+        <div class="view-ui">
+            <!--contents-->
+            <div class="center-contents" id="contact-us">
+                <div class="layout">
+                    <!--<img src="grid%20animation.gif" alt="">-->
+                        <h1 class="hide text-gradients big-text flt-right hide trans-1s">I am Sri Datta.</h1>
+                            <p class="hide text-gradients flt-right trans-1s p">
+                                In 2020, I started my journey to exlpore my passion in computers. I enjoyed a lot in developing web pages and started my carrer as developer.
+                                <br><br>
+                                Fast-forward today I'm a Full stack developer building scalable web applications. I'm also intrested in AI & Business analytics with web development.
+                            </p>
+                            <div class="hide ">
+                                    <a href="https://github.com/asridatta" target="_blank" rel="noopener noreferrer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="social-icon hide" aria-hidden="true">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/sridatta-acha-62194a2a8/" target="_blank" rel="noopener noreferrer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon hide trans-2s" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+                                            <path
+                                                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                            </div> 
+                </div>
+            </div>
+            <div class="center-contents">
+                <div class="layout">
+                    <h1 class="hide text-gradients big-text">Skills</h1>
+                    <div class="hide">
+                        <div class="skill">
+                            <b>Python</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>Java</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>Django</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>JavaScript</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>React</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>Oracle DB SQL</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>SQLite</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>Frontend</b>
+                        </div>
+                        <div class="skill">
+                            <b>HTML, JS, CSS</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>UI design</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>Progressive Web Applications</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>Docker</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>Git</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>GitHub</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>API Developemnt</b> <wbr/>
+                        </div>
+                        <div class="skill">
+                            <b>VS Code</b> <wbr/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-contents">
+                <div class="hide layout">
+                    <h1 class="text-gradients big-text">Projects</h1>
+                    <div class="hide project-card">
+                        <h1 class="inline text-gradients h2">SD Code editor</h1>
+                        <p class="text-gradients p">A code editor designed specifically for mobile devices with the basic features of a <a class="hightlight"> code editor</a> in the desktop. Mobile friendly UI of code editor with improved the suppport to write upto 2500 lines of code without the issues in mobile.</p>
+                        <div class="skill">
+                            <b>Progressive Web Application</b>
+                            <wbr>
+                        </div>
+                        <div class="skill">
+                            <b>ACE library</b>
+                            <wbr>
+                        </div>
+                        <div class="skill">
+                            <b>Mobile First Design</b>
+                            <wbr>
+                        </div>
+                        <div class="skill">
+                            <b>HTML, CSS, JS</b>
+                            <wbr>
+                        </div>
+                        <div class="skill">
+                            <b>Git</b>
+                            <wbr>
+                        </div>
+                        <div class="skill">
+                            <b>GitHub</b>
+                            <wbr>
+                        </div>
+                        <br><br>
+                        <a href="https://vivekdevasani.github.io/" target="_blank" rel="noopener noreferrer nofollow" class="ext-link">open editor</a><wbr>
+                        <a href="https://github.com/asridatta/sdcodeeditor" target="_blank" rel="noopener noreferrer nofollow" class="ext-link">source code</a><br><br>
+                        <b class="text-gradients time">Aug - Sept 2022</b><br>
+                    </div>
+                    <div class="hide project-card">
+                        <h1 class="inline text-gradients h2">Sara Assistant</h1>
+                        <p class="text-gradients p">My First project. A personal assistant used to perform all tasks at a place. Supports continuty of conversation and can open and perform operations on few mobile apps like whatsapp, youtube etc. It has capability to generate ranomised outputs and lpowered with TTS and STT API.</p>
+                        <div class="skill">
+                            <b>ChatBot</b>
+                            <wbr>
+                        </div>
+                        <div class="skill">
+                            <b>UI Design</b>
+                            <wbr>
+                        </div>
+                        <div class="skill">
+                            <b>HTML, CSS, JS</b>
+                            <wbr>
+                        </div>
+                        <br><br>
+                        <a href="https://github.com/asridatta/404" target="_blank" rel="noopener noreferrer nofollow" class="ext-link">open assistant</a><wbr>
+                        <a href="https://github.com/asridatta/404" target="_blank" rel="noopener noreferrer nofollow" class="ext-link">source code</a><br><br>
+                        <b class="text-gradients time">apr - jun 2021</b><br>
+                    </div>
+                </div>
+            </div>
+            <div class="center-contents">
+                <div class="hide">
+                    <p class="text-gradients inline">Want to see more?</p>
+                    <a href="http://github.com/asridatta/archived-portfolio" target="_blank" rel="noopener noreferrer" class="ext-link">see archived portfolio</a>
+                    <br>
+                    <p class="text-gradients inline">looking for contact </p> <a href="#contact-us" class="ext-link">click here</a>
+                </div>
+            </div>
+            <!--contents-->
+        </div>
+    </div>
+    <script>
+        let elements = document.querySelectorAll('.hide');
+        const inspector = new IntersectionObserver((contents, observer) => {
+            contents.forEach((content)=>{
+                if(content.isIntersecting){
+                    content.target.classList.add('show');
+                }else{
+                    content.target.classList.remove('show');
+                }
+            });
+        },{
+            rootMargin: '40%',
+        });
+        elements.forEach((element)=>{
+            inspector.observe(element);
+        });
+    </script>
+</body>
+</html>
